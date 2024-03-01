@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <main>
+
+        <div class="library">
+            <div class="bookshelf"></div>
+            <button class="new-book-button">New</button>
+            <button class="remove-book-button">Remove</button>
+            <dialog>
+                <form method="dialog">
+                    <div class="field">
+                        <label for="title">Title</label>
+                        <input type="text" name="title" id="title" placeholder="The Lord of The Rings">
+                    </div>
+
+                    <div class="field">
+                        <label for="author">Author</label>
+                        <input type="text" name="author" id="author" placeholder="J R R Tolkien">
+                    </div>
+
+                    <div class="row-field">
+                        <div>
+                            <input type="radio" name="status" id="read" value="read">
+                            <label for="status">Read</label>
+                        </div>
+                        
+                        <div>
+                            <input type="radio" name="status" id="not-read" value="not read">
+                            <label for="status">Not Read</label>
+                        </div>
+                    </div>
+
+                    <button class="submit-button" type="submit">Add Book</button>
+                    <button type="button" class="cancel">Cancel</button>
+                </form>
+            </dialog>
+
+        </div>
+
+    </main>
+
+    <script src="./main.js"></script>
+</body>
+</html>
