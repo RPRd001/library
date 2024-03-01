@@ -34,23 +34,47 @@ bookForm.addEventListener('submit', (e) => {
     bookDialog.close()
 })
 
+cancelButton.addEventListener('click', () => {
+    // Reset the form data
+    bookForm.reset()
+    // Close the dialog
+    bookDialog.close()
+})
+
+// Book Object Constructor Function
+function Book(title, author, status) {
+    return {title, author, status}
+}
+
 function addBookToLibrary (formData) {
 
     // Create a Book Object
-    // ?
+    const book = new Book(
+        formData.get('title'),
+        formData.get('author'),
+        formData.get('status')
+    )
 
-    // Render
+    // Add to Library's Array
+    myLibrary.push(book)
+
+    // Alternative Rendering
     bookshelf.innerHTML += `<div class="book">
     <h2>
-        ${formData.get('title')}
+        ${book.title}
     </h2>
     <p>
-        ${formData.get('author')}
+        ${book.author}
     </p>
     <p>
-        ${formData.get('status')}
+        ${book.status}
     </p>
-</div>`;
-
-    
+</div>`;    
 }
+
+
+/*
+    Pending:
+    1. Make the remove book button functionality
+    2. Make a nice design for the books and the library itself
+*/
