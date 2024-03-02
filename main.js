@@ -43,7 +43,8 @@ cancelButton.addEventListener('click', () => {
 
 // Book Object Constructor Function
 function Book(title, author, status) {
-    return {title, author, status}
+    index = (myLibrary.length + 1)
+    return {title, author, status, index}
 }
 
 function addBookToLibrary (formData) {
@@ -59,17 +60,7 @@ function addBookToLibrary (formData) {
     myLibrary.push(book)
 
     // Alternative Rendering
-    bookshelf.innerHTML += `<div class="book">
-    <h2>
-        ${book.title}
-    </h2>
-    <p>
-        ${book.author}
-    </p>
-    <p>
-        ${book.status}
-    </p>
-</div>`;    
+    bookshelf.innerHTML += `<div title="${book.title}" class="book" id=book-${book.index}></div>`; 
 }
 
 
@@ -77,4 +68,6 @@ function addBookToLibrary (formData) {
     Pending:
     1. Make the remove book button functionality
     2. Make a nice design for the books and the library itself
+    3. Make an extra function for displaying dialogs when clicking the books with the options for removing or changing the status of the book
+        3.1. The book status will be denoted by a changing in the books img (an image of the book in green is a read book, otherwise it is a non-read book)
 */

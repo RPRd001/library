@@ -6,47 +6,59 @@
     <title>Library</title>
     <!-- CSS -->
     <link rel="stylesheet" href="./styles.css">
+    <!-- JS -->
+    <script src="./main.js" defer></script>
+    <!-- Material Icons from Google -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 </head>
 <body>
-    <main>
+    <header>
+        <h1 class="header-title">
+            The Library
+        </h1>
+        <button class="new-book-button">
+            <span class="material-symbols-outlined">
+                add
+            </span>
+        </button>
+    </header>
 
-        <div class="library">
-            <div class="bookshelf"></div>
-            <button class="new-book-button">New</button>
-            <button class="remove-book-button">Remove</button>
-            <dialog>
-                <form method="dialog">
-                    <div class="field">
-                        <label for="title">Title</label>
-                        <input type="text" name="title" id="title" placeholder="The Lord of The Rings">
-                    </div>
+    <dialog>
+        <form method="dialog">
+            <div class="field">
+                <label for="title">Title</label>
+                <input type="text" name="title" id="title" placeholder="The Lord of The Rings">
+            </div>
 
-                    <div class="field">
-                        <label for="author">Author</label>
-                        <input type="text" name="author" id="author" placeholder="J R R Tolkien">
-                    </div>
+            <div class="field">
+                <label for="author">Author</label>
+                <input type="text" name="author" id="author" placeholder="J R R Tolkien">
+            </div>
 
-                    <div class="row-field">
-                        <div>
-                            <input type="radio" name="status" id="read" value="read">
-                            <label for="status">Read</label>
-                        </div>
-                        
-                        <div>
-                            <input type="radio" name="status" id="not-read" value="not read">
-                            <label for="status">Not Read</label>
-                        </div>
-                    </div>
+            <div class="row-field">
+                <div>
+                    <input type="radio" name="status" id="read" value="Read">
+                    <label for="status">Read</label>
+                </div>
+                
+                <div>
+                    <input type="radio" name="status" id="not-read" value="Not Read">
+                    <label for="status">Not Read</label>
+                </div>
+            </div>
 
-                    <button class="submit-button" type="submit">Add Book</button>
-                    <button type="button" class="cancel">Cancel</button>
-                </form>
-            </dialog>
+            <button class="submit-button" type="submit">Add Book</button>
+            <button type="button" class="cancel">Cancel</button>
+        </form>
+    </dialog>
 
-        </div>
-
+    <main>        
+        <div class="bookshelf"></div>
+        
+        <!-- Thanks for the Background Image -->
+        <p class="thanks">
+            Background Image from <a href="https://pixabay.com/es/users/stocksnap-894430/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=2596809" target="_blank" rel="noopener noreferer">StockSnap</a> in <a href="https://pixabay.com/es//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=2596809" target="_blank" rel="noopener noreferer">Pixabay</a>
+        </p>
     </main>
-
-    <script src="./main.js"></script>
 </body>
 </html>
